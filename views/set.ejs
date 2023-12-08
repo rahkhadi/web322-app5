@@ -62,6 +62,13 @@
         <a href="/lego/editSet/<%= set.set_num %>" class="btn btn-success">Edit Set</a>
         <a href="/lego/deleteSet/<%= set.set_num %>" class="btn btn-success">Delete</a>
 
+        <% if (session.user) { %>
+          <form method="GET" action="/lego/editSet/<%= set.set_num %>">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </form>
+        <% } %>
+        
+
       </div>
     </div>
 
